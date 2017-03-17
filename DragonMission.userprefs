@@ -1,0 +1,23 @@
+﻿<Properties StartupItem="DragonMission.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\c#\Heroi\moverJogador.cs">
+    <Files>
+      <File FileName="Assets\Scripts\c#\Inimigos\Acoes\Fracos\DragLanca.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\c#\Heroi\atributosHeroi.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\c#\upamento.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\c#\atuacao.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\c#\NPCs\chegandoTeleporte.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\c#\Locais\prologo.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\c#\NPCs\spark.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\c#\buffsImagens.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\c#\Locais\fases.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\c#\Heroi\moverJogador.cs" Line="15" Column="28" />
+      <File FileName="Assets\Scripts\c#\Progeteis\progeteis.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\c#\Progeteis\recocheteaProgetil.cs" Line="28" Column="15" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

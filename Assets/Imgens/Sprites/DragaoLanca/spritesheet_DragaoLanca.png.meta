@@ -1,0 +1,706 @@
+fileFormatVersion: 2
+guid: e149eca062aa2c14086180d15de54626
+timeCreated: 1489327759
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spritesheet_DragaoLanca_0
+    21300002: spritesheet_DragaoLanca_1
+    21300004: spritesheet_DragaoLanca_2
+    21300006: spritesheet_DragaoLanca_3
+    21300008: spritesheet_DragaoLanca_4
+    21300010: spritesheet_DragaoLanca_5
+    21300012: spritesheet_DragaoLanca_6
+    21300014: spritesheet_DragaoLanca_7
+    21300016: spritesheet_DragaoLanca_8
+    21300018: spritesheet_DragaoLanca_9
+    21300020: spritesheet_DragaoLanca_10
+    21300022: spritesheet_DragaoLanca_11
+    21300024: spritesheet_DragaoLanca_12
+    21300026: spritesheet_DragaoLanca_13
+    21300028: spritesheet_DragaoLanca_14
+    21300030: spritesheet_DragaoLanca_15
+    21300032: spritesheet_DragaoLanca_16
+    21300034: spritesheet_DragaoLanca_18
+    21300036: spritesheet_DragaoLanca_20
+    21300038: spritesheet_DragaoLanca_21
+    21300040: spritesheet_DragaoLanca_22
+    21300042: spritesheet_DragaoLanca_25
+    21300044: spritesheet_DragaoLanca_28
+    21300046: spritesheet_DragaoLanca_31
+    21300048: spritesheet_DragaoLanca_36
+    21300050: spritesheet_DragaoLanca_37
+    21300052: spritesheet_DragaoLanca_45
+    21300054: spritesheet_DragaoLanca_46
+    21300056: spritesheet_DragaoLanca_47
+    21300058: spritesheet_DragaoLanca_48
+    21300060: spritesheet_DragaoLanca_49
+    21300062: spritesheet_DragaoLanca_50
+    21300064: spritesheet_DragaoLanca_51
+    21300066: spritesheet_DragaoLanca_53
+    21300068: spritesheet_DragaoLanca_54
+    21300070: spritesheet_DragaoLanca_55
+    21300072: spritesheet_DragaoLanca_56
+    21300074: spritesheet_DragaoLanca_57
+    21300076: spritesheet_DragaoLanca_58
+    21300078: spritesheet_DragaoLanca_59
+    21300080: spritesheet_DragaoLanca_60
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: tvOS
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Tizen
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Samsung TV
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 321
+        width: 45
+        height: 37
+      alignment: 9
+      pivot: {x: 0.32, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 321
+        width: 47
+        height: 37
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 321
+        width: 45
+        height: 37
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_3
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 321
+        width: 48
+        height: 37
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_4
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 321
+        width: 48
+        height: 37
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_5
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 324
+        width: 51
+        height: 34
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_6
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 317
+        width: 45
+        height: 41
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_7
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 279
+        width: 90
+        height: 32
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_8
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 279
+        width: 53
+        height: 32
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_9
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 279
+        width: 91
+        height: 32
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_10
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 266
+        width: 45
+        height: 40
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 237
+        width: 94
+        height: 32
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_12
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 237
+        width: 77
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_13
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 237
+        width: 68
+        height: 32
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_14
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 235
+        width: 45
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 195
+        width: 54
+        height: 32
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_16
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 195
+        width: 77
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_18
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 195
+        width: 78
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_20
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 191
+        width: 44
+        height: 34
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_21
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 189
+        width: 45
+        height: 36
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_22
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 153
+        width: 80
+        height: 32
+      alignment: 9
+      pivot: {x: 0.34, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_25
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 153
+        width: 80
+        height: 32
+      alignment: 9
+      pivot: {x: 0.34, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_28
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 133
+        width: 42
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_31
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 143
+        width: 45
+        height: 36
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_36
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 133
+        width: 42
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_37
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 133
+        width: 42
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_45
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 97
+        width: 45
+        height: 36
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_46
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 75
+        width: 42
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_47
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 75
+        width: 42
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_48
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 75
+        width: 42
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_49
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 75
+        width: 42
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_50
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 75
+        width: 42
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_51
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 75
+        width: 42
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_53
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 51
+        width: 47
+        height: 36
+      alignment: 9
+      pivot: {x: 0.46, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_54
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 27
+        width: 47
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_55
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 27
+        width: 50
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_56
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 27
+        width: 53
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_57
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 16
+        width: 42
+        height: 48
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_58
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 16
+        width: 47
+        height: 49
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_59
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 24
+        width: 45
+        height: 39
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_DragaoLanca_60
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 5
+        width: 50
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: bc590126e79eb934092b9a19d6119036
+timeCreated: 1483546491
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - musicaDaFase: {instanceID: 0}
+  - morteSom: {instanceID: 0}
+  - pegandoItem: {instanceID: 0}
+  - encontrado: {instanceID: 0}
+  - scoresTexto: {instanceID: 0}
+  - tempoText: {instanceID: 0}
+  - hpBoss: {instanceID: 0}
+  - bufDef: {fileID: 21300000, guid: c402af8de89b4424bb61518a69346d2e, type: 3}
+  - bufRege: {fileID: 21300000, guid: 5acfe79ef4bb0404085542102a04658b, type: 3}
+  - bufSpeed: {fileID: 21300000, guid: 7ec2c7514f11c2e4988b281474459885, type: 3}
+  - bufForca: {fileID: 21300000, guid: e68ffde7b69e14b4e8ea83c19aa50ae6, type: 3}
+  - bufAgil: {fileID: 21300000, guid: 6773c400e82c93e4db41e96765e70821, type: 3}
+  - dBufDef: {fileID: 21300000, guid: d60a6436806f6b449817e003bb0ad3bc, type: 3}
+  - dBufRege: {fileID: 21300000, guid: 53fcc3faae4e8c647b0f5b559b2f3617, type: 3}
+  - dBufSpeed: {fileID: 21300000, guid: 2f6abb81f02988242acb216f479fb2a3, type: 3}
+  - dBufForca: {fileID: 21300000, guid: 7d73382b70a10894a833dcb84367842c, type: 3}
+  - dBufAgil: {fileID: 21300000, guid: fff0bfc1a451e5d459dce900be46f665, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

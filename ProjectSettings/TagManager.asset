@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Inimigo
+  - Chao
+  - Progetil
+  - Poder
+  - EspadaHeroi
+  - ArmaIni
+  - QuemFala
+  - Fala
+  - Parede
+  - Coletaveis
+  - Tesouros
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Chao
+  - Inimigo
+  - Jogador
+  - PoderesAli
+  - PoderesIni
+  - Barreira
+  - Npc
+  - Salve
+  - PoderesGeral
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Coisas
+    uniqueID: 1660549265
+    locked: 0
+  - name: Plataformas
+    uniqueID: 223485661
+    locked: 0
+  - name: Inimigos
+    uniqueID: 828857151
+    locked: 0
+  - name: Jogador
+    uniqueID: 1670288541
+    locked: 0
+  - name: Poderes
+    uniqueID: 3294424803
+    locked: 0
+  - name: Sistema
+    uniqueID: 319098581
+    locked: 0
+  - name: Agua
+    uniqueID: 156734455
+    locked: 0

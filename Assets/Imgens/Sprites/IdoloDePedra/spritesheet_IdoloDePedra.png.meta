@@ -1,0 +1,776 @@
+fileFormatVersion: 2
+guid: 71a6df38fda965a4aaad45b520c332a1
+timeCreated: 1489345861
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spritesheet_IdoloDePedra_0
+    21300002: spritesheet_IdoloDePedra_1
+    21300004: spritesheet_IdoloDePedra_2
+    21300006: spritesheet_IdoloDePedra_3
+    21300008: spritesheet_IdoloDePedra_4
+    21300010: spritesheet_IdoloDePedra_5
+    21300012: spritesheet_IdoloDePedra_8
+    21300014: spritesheet_IdoloDePedra_18
+    21300016: spritesheet_IdoloDePedra_21
+    21300018: spritesheet_IdoloDePedra_23
+    21300020: spritesheet_IdoloDePedra_30
+    21300022: spritesheet_IdoloDePedra_31
+    21300024: spritesheet_IdoloDePedra_32
+    21300026: spritesheet_IdoloDePedra_35
+    21300028: spritesheet_IdoloDePedra_38
+    21300030: spritesheet_IdoloDePedra_56
+    21300032: spritesheet_IdoloDePedra_59
+    21300034: spritesheet_IdoloDePedra_62
+    21300036: spritesheet_IdoloDePedra_65
+    21300038: spritesheet_IdoloDePedra_67
+    21300040: spritesheet_IdoloDePedra_68
+    21300042: spritesheet_IdoloDePedra_93
+    21300044: spritesheet_IdoloDePedra_98
+    21300046: spritesheet_IdoloDePedra_100
+    21300048: spritesheet_IdoloDePedra_105
+    21300050: spritesheet_IdoloDePedra_108
+    21300052: spritesheet_IdoloDePedra_111
+    21300054: spritesheet_IdoloDePedra_114
+    21300056: spritesheet_IdoloDePedra_117
+    21300058: spritesheet_IdoloDePedra_119
+    21300060: spritesheet_IdoloDePedra_141
+    21300062: spritesheet_IdoloDePedra_143
+    21300064: spritesheet_IdoloDePedra_145
+    21300066: spritesheet_IdoloDePedra_147
+    21300068: spritesheet_IdoloDePedra_150
+    21300070: spritesheet_IdoloDePedra_152
+    21300072: spritesheet_IdoloDePedra_159
+    21300074: spritesheet_IdoloDePedra_169
+    21300076: spritesheet_IdoloDePedra_175
+    21300078: spritesheet_IdoloDePedra_181
+    21300080: spritesheet_IdoloDePedra_185
+    21300082: spritesheet_IdoloDePedra_195
+    21300084: spritesheet_IdoloDePedra_200
+    21300086: spritesheet_IdoloDePedra_202
+    21300088: spritesheet_IdoloDePedra_203
+    21300090: spritesheet_IdoloDePedra_204
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: tvOS
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Tizen
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Samsung TV
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 278
+        width: 76
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_1
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 278
+        width: 76
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_2
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 320
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_3
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 320
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_4
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 300
+        width: 39
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_5
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 305
+        width: 35
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_8
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 285
+        width: 39
+        height: 22
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_18
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 271
+        width: 56
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_21
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 255
+        width: 39
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_23
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 250
+        width: 39
+        height: 22
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_30
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 237
+        width: 76
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_31
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 215
+        width: 39
+        height: 23
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_32
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 216
+        width: 39
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_35
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 215
+        width: 50
+        height: 22
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_38
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 215
+        width: 43
+        height: 21
+      alignment: 9
+      pivot: {x: 0.19, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_56
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 178
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_59
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 179
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_62
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 178
+        width: 39
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_65
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 180
+        width: 48
+        height: 23
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_67
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 180
+        width: 52
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_68
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 178
+        width: 41
+        height: 21
+      alignment: 9
+      pivot: {x: 0.41, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_93
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 145
+        width: 52
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_98
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 145
+        width: 49
+        height: 23
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_100
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 143
+        width: 54
+        height: 19
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_105
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 110
+        width: 52
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_108
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 110
+        width: 41
+        height: 21
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_111
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 110
+        width: 41
+        height: 21
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_114
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 110
+        width: 41
+        height: 21
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_117
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 110
+        width: 41
+        height: 21
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_119
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 108
+        width: 54
+        height: 15
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_141
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 75
+        width: 41
+        height: 21
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_143
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 75
+        width: 41
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_145
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 75
+        width: 41
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_147
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 75
+        width: 41
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_150
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 69
+        width: 41
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_152
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 74
+        width: 51
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_159
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 40
+        width: 52
+        height: 25
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_169
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 40
+        width: 43
+        height: 22
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_175
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 40
+        width: 41
+        height: 21
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_181
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 40
+        width: 45
+        height: 23
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_185
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 40
+        width: 49
+        height: 24
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_195
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 40
+        width: 53
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_200
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 6
+        width: 55
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_202
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 5
+        width: 54
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_203
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 5
+        width: 54
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_IdoloDePedra_204
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 5
+        width: 54
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
