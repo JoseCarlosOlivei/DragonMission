@@ -152,7 +152,7 @@ public class litper : MonoBehaviour {
                         }
                     }else
                     {
-                        movimentos.Move(false, true);
+                        movimentos.Move(false, true,true);
                         movimentos.VirarParaPlayer();
                     }
                 }

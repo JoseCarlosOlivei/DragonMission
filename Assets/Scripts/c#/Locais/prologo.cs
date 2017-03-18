@@ -226,7 +226,7 @@ public class prologo : MonoBehaviour {
         atuacao litper = litpterAtor.GetComponent<atuacao>();
         if (dataSave.jogoAtual.subCena == 0)
         {
-            litper.GetComponent<moveCPU>().Move(false, false);
+            litper.GetComponent<moveCPU>().Move(false, false,true);
             movCala.Movimento(false, true);
         }
         if (movCala.noChao)

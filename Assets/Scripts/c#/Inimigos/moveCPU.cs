@@ -21,8 +21,6 @@ public class moveCPU : MonoBehaviour {
 	//public GameObject player;
 	public float speed = 2f;
 	public bool viradoDireita = true;
-	private float distX;
-	private float distY;
 	public float moveX = 0f;
 	public bool viu= false;
 	private float tempoCaminhar = 0f;
@@ -156,6 +154,19 @@ public class moveCPU : MonoBehaviour {
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
 
+        //Se estiver nas pontas
+        if (((pontaDrt && !podeCair) && moveX > 0f) || ((pontaEsq && !podeCair) && moveX < 0f))
+        {
+            moveX = 0f;
+            Parar();
+        }
+
+        if ((obstaculoDir && moveX > 0f) || (obstaculoEsq && moveX < 0f))
+        {
+            moveX = 0f;
+            NaoDeslizar();
+        }
+
         if (anima.GetInteger("estados") == 4 || anima.GetInteger("estados") == 5)
         {
             moveX = 0f;
@@ -256,14 +267,7 @@ public class moveCPU : MonoBehaviour {
                     tempoAudioCaindo += Time.deltaTime;
                 }
             }
-        }
-
-        if ((obstaculoDir && moveX > 0f) ||(obstaculoEsq && moveX < 0f) )
-        {
-            moveX = 0f;
-            NaoDeslizar();
-        }
-       
+        }       
 
         if (moveX != 0f)
             {
@@ -447,11 +451,11 @@ public class moveCPU : MonoBehaviour {
 
             if (DistaciaX(transform.position.x, atributosHeroi.heroiX.transform.position.x) < collid.bounds.extents.x)
             {
-                Move(false, viradoDireita);
+                Move(false, viradoDireita,true);
             }
             else
             {
-                Move(true, viradoDireita);
+                Move(true, viradoDireita,true);
             }
         }
         else
@@ -463,49 +467,39 @@ public class moveCPU : MonoBehaviour {
 
             for (int i = 0; i < fases.faseX.plataformas.Length; i++)
             {
-                if (!ultSaida || (ultSaida && fases.faseX.plataformas[i] != ultSaida.gameObject))
-                {
-                    Bounds bod = fases.faseX.plataformas[i].GetComponent<BoxCollider2D>().bounds;
-                    float altMax = bod.center.y + bod.extents.y;
+                Bounds bod = fases.faseX.plataformas[i].GetComponent<BoxCollider2D>().bounds;
+                float altMax = bod.center.y + bod.extents.y;
 
-                    if (distX1 >= 0f)
+                if (distX1 >= 0f)
+                {
+                    distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], true);
+                    distX2Longe = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], false);
+                }
+                else
+                {
+                    distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], false);
+                    distX2Longe = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], true);
+                }
+
+                if (altMax > (transform.position.y + sobraDistY) && (altMax - transform.position.y) < puloAltura && distX2Longe * distX1 > 0f && (ultSaida == fases.faseX.plataformas[i] || (ultSaida && SemObstaculosEntre(ultSaida.gameObject, fases.faseX.plataformas[i]) || SemObstaculosEntre(gameObject, fases.faseX.plataformas[i]))))
+                {
+                    float distXX2 = DistaciaX(hero.position.y, altMax);
+
+                    if (idPlata == -1)
                     {
-                        distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], true);
-                        distX2Longe = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], false);
+                        idPlata = i;
+                        distXX = distXX2;
                     }
                     else
                     {
-                        distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], false);
-                        distX2Longe = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], true);
-                    }
-
-                    if (altMax > (transform.position.y + sobraDistY) && (altMax - transform.position.y) < puloAltura && distX2Longe * distX1 > 0f && ((ultSaida && SemObstaculosEntre(ultSaida.gameObject, fases.faseX.plataformas[i]) || SemObstaculosEntre(gameObject, fases.faseX.plataformas[i]))))
-                    {
-                        float distXX2 = 0f;
-                        if (distX2 >= 0f)
-                        {
-                            distXX2 = DistaciaX(paredes.PontaX(fases.faseX.plataformas[i], true), transform.position.x);
-                        }
-                        else
-                        {
-                            distXX2 = DistaciaX(paredes.PontaX(fases.faseX.plataformas[i], false), transform.position.x);
-                        }
-                        if (idPlata == -1)
+                        if (distXX > distXX2)
                         {
                             idPlata = i;
                             distXX = distXX2;
                         }
-                        else
-                        {
-                            if (distXX > distXX2)
-                            {
-                                idPlata = i;
-                                distXX = distXX2;
-                            }
-                        }
                     }
                 }
-            }
+            }           
 
             if (idPlata < 0f)
             {
@@ -577,7 +571,7 @@ public class moveCPU : MonoBehaviour {
                     Pular();
                 }
 
-                Move(true, viradoDireita);
+                Move(true, viradoDireita,true);
             }
             else
             {
@@ -591,11 +585,11 @@ public class moveCPU : MonoBehaviour {
                 }
                 if (DistaciaX(transform.position.x, atributosHeroi.heroiX.transform.position.x) < collid.bounds.extents.x)
                 {
-                    Move(false, viradoDireita);
+                    Move(false, viradoDireita,true);
                 }
                 else
                 {
-                    Move(true, viradoDireita);
+                    Move(true, viradoDireita,true);
                 }
             }
         }
@@ -634,13 +628,25 @@ public class moveCPU : MonoBehaviour {
         Collider2D cF = objF.GetComponent<Collider2D>();
 
         Vector2 cent0 = c0.bounds.center;
-        cent0.y += c0.bounds.extents.y;
+        if (obj0.tag == "Chao")
+        {
+            cent0.y += c0.bounds.extents.y;
+        }else
+        {
+            cent0.y -= c0.bounds.extents.y;
+        }
         Vector2 cent02 = cent0;
         cent0.x += c0.bounds.extents.x;
         cent02.x -= c0.bounds.extents.x;
 
         Vector2 centF = cF.bounds.center;
-        centF.y += cF.bounds.extents.y;
+        if(objF.tag == "Chao")
+        {
+            centF.y += cF.bounds.extents.y;
+        }else
+        {
+            centF.y -= cF.bounds.extents.y;
+        }
         centF.x += cF.bounds.extents.x;
         Vector2 centF2 = centF;
         centF2.x -= cF.bounds.size.x;
@@ -650,7 +656,7 @@ public class moveCPU : MonoBehaviour {
 
         RaycastHit2D hit1;
 
-        if (centF.y < cent0.y)
+        if (centF.y-sobraDistY < cent0.y)
         {
             float anguloZ = -90f;
 
@@ -669,14 +675,14 @@ public class moveCPU : MonoBehaviour {
             cent02.y += sobraDistY;
             cent02.x -= sobraDistY;
 
-            for (int i = 0; i <= 5; i++)
+            for (int i = 0; i < 10; i++)
             {
                 if (i > 0)
                 {
-                    anguloZ += 18f;
+                    anguloZ += 9f;
                 }
                 direX = Vector2.right;
-                if (cent0.x > centF2.x)
+                if (cent0.x < centF2.x)
                 {
                     direX.x *= -1f;
                 }
@@ -693,10 +699,9 @@ public class moveCPU : MonoBehaviour {
                 }
                 dire = Quaternion.Euler(Vector3.forward * anguloZ) * direX;
                 hit2 = Physics2D.Raycast(cent02, dire, dist, fases.faseX.chao);
-
+              
                 if ((hit1 && hit1.collider.gameObject == objF && hit1.point.y + sobraDistY > centF2.y) || (hit2 && hit2.collider.gameObject == objF && hit2.point.y + sobraDistY > centF.y))
                 {
-                    //Debug.Log("Foi");
                     return true;
                 }
             }
@@ -770,11 +775,11 @@ public class moveCPU : MonoBehaviour {
 
             if (DistaciaX(transform.position.x, atributosHeroi.heroiX.transform.position.x) < collid.bounds.extents.x)
             {
-                Move(false, viradoDireita);
+                Move(false, viradoDireita,true);
             }
             else
             {
-                Move(true, viradoDireita);
+                Move(true, viradoDireita,true);
             }
         }
         else
@@ -783,43 +788,41 @@ public class moveCPU : MonoBehaviour {
 
             float posX1 = 0f;
             float posX2 = 0f;
-            //float altP = 0f;
+            float altP = 0f;
             float distX1 = transform.position.x - hero.position.x;
 
             for (int i = 0; i < fases.faseX.plataformas.Length; i++)
             {
-                if (!ultSaida || (ultSaida && fases.faseX.plataformas[i] != ultSaida.gameObject))
+                if (distX1 > 0f)
                 {
-                    if (distX1 > 0f)
+                    distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], false);
+                    posX2 = paredes.PontaX(fases.faseX.plataformas[i], false);
+                }
+                else
+                {
+                    distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], true);
+                    posX2 = paredes.PontaX(fases.faseX.plataformas[i], true);
+                }
+                Bounds bod = fases.faseX.plataformas[i].GetComponent<BoxCollider2D>().bounds;
+                float altMax = bod.center.y + bod.extents.y;
+
+                if (altMax < puloAltura + transform.position.y && distX2 * distX1 >= 0f && hero.position.y + sobraDistY >= altMax && (ultSaida == fases.faseX.plataformas[i] || SemObstaculosEntre(gameObject, fases.faseX.plataformas[i]) || (ultSaida && SemObstaculosEntre(ultSaida.gameObject, fases.faseX.plataformas[i]))))
+                {
+                    if (idPlata == -1)
                     {
-                        distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], false);
-                        posX2 = paredes.PontaX(fases.faseX.plataformas[i], false);
+                        idPlata = i;
+                        altP = altMax;
+                        posX1 = posX2;
                     }
                     else
                     {
-                        distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], true);
-                        posX2 = paredes.PontaX(fases.faseX.plataformas[i], true);
-                    }
-                    Bounds bod = fases.faseX.plataformas[i].GetComponent<BoxCollider2D>().bounds;
-                    float altMax = bod.center.y + bod.extents.y;
-
-                    if (altMax < puloAltura+transform.position.y && distX2 * distX1 >= 0f && hero.position.y+sobraDistY > altMax && (SemObstaculosEntre(gameObject, fases.faseX.plataformas[i]) || (ultSaida && SemObstaculosEntre(ultSaida.gameObject, fases.faseX.plataformas[i]))))
-                    {
-                        if (idPlata == -1)
+                        float xy = DistaciaX(altP, hero.position.y);
+                        float yy = DistaciaX(altMax, hero.position.y);
+                        if (xy > yy)
                         {
                             idPlata = i;
-                            //altP = altMax;
                             posX1 = posX2;
-                        }
-                        else
-                        {
-                            float xy = DistaciaX(posX1, hero.position.x);
-                            float yy = DistaciaX(posX2, hero.position.x);
-                            if (xy > yy)
-                            {
-                                idPlata = i;
-                                posX1 = posX2;
-                            }
+                            altP = altMax;
                         }
                     }
                 }
@@ -829,38 +832,36 @@ public class moveCPU : MonoBehaviour {
             {
                 for (int i = 0; i < fases.faseX.plataformas.Length; i++)
                 {
-                    if (!ultSaida || (ultSaida && fases.faseX.plataformas[i] != ultSaida.gameObject))
-                    {
-                        Bounds bod = fases.faseX.plataformas[i].GetComponent<BoxCollider2D>().bounds;
-                        float altMax = bod.center.y + bod.extents.y;
+                    Bounds bod = fases.faseX.plataformas[i].GetComponent<BoxCollider2D>().bounds;
+                    float altMax = bod.center.y + bod.extents.y;
 
-                        if (distX1 <= 0f)
+                    if (distX1 <= 0f)
+                    {
+                        distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], true);
+                        posX2 = paredes.PontaX(fases.faseX.plataformas[i], true);
+                    }
+                    else
+                    {
+                        distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], false);
+                        posX2 = paredes.PontaX(fases.faseX.plataformas[i], false);
+                    }
+                    if ((altMax < transform.position.y + puloAltura && ((ultSaida == fases.faseX.plataformas[i])|| SemObstaculosEntre(gameObject, fases.faseX.plataformas[i])) || (ultSaida && SemObstaculosEntre(ultSaida.gameObject, fases.faseX.plataformas[i]))))
+                    {
+                        if (idPlata == -1)
                         {
-                            distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], true);
-                            posX2 = paredes.PontaX(fases.faseX.plataformas[i], true);
+                            idPlata = i;
+                            altP = altMax;
+                            posX1 = posX2;
                         }
                         else
                         {
-                            distX2 = transform.position.x - paredes.PontaX(fases.faseX.plataformas[i], false);
-                            posX2 = paredes.PontaX(fases.faseX.plataformas[i], false);
-                        }
-                        if ((altMax<transform.position.y+puloAltura && (SemObstaculosEntre(gameObject, fases.faseX.plataformas[i])) || (ultSaida && SemObstaculosEntre(ultSaida.gameObject, fases.faseX.plataformas[i] ))))
-                        {
-                            if (idPlata == -1)
+                            float xy = DistaciaX(altP, hero.position.y);
+                            float yy = DistaciaX(altMax, hero.position.y);
+                            if (xy > yy)
                             {
                                 idPlata = i;
-                                //altP = altMax;
                                 posX1 = posX2;
-                            }
-                            else
-                            {
-                                float xy = DistaciaX(posX1, hero.position.y);
-                                float yy = DistaciaX(posX2, hero.position.y);
-                                if (xy > yy)
-                                {
-                                    idPlata = i;
-                                    posX1 = posX2;
-                                }
+                                altP = altMax;
                             }
                         }
                     }
@@ -891,10 +892,10 @@ public class moveCPU : MonoBehaviour {
 
                 if(DistaciaX(transform.position.x,posXPraIr) < collid.bounds.extents.x/2f)
                 {
-                    Move(false, viradoDireita);
+                    Move(false, viradoDireita,true);
                 }else
                 {
-                    Move(true, viradoDireita);
+                    Move(true, viradoDireita,true);
                 }
             }
             else
@@ -909,18 +910,48 @@ public class moveCPU : MonoBehaviour {
                 }
                 if (DistaciaX(transform.position.x, atributosHeroi.heroiX.transform.position.x) < collid.bounds.extents.x)
                 {
-                    Move(false, viradoDireita);
+                    Move(false, viradoDireita,true);
                 }
                 else
                 {
-                    Move(true, viradoDireita);
+                    Move(true, viradoDireita,true);
                 }
+            }
+        }
+    }
+
+    private void HeroiAproximaTolera(float quantoX, bool tolerancia)
+    {
+        float distX = DistaciaX(transform.position.x, atributosHeroi.heroiX.transform.position.x);
+        if (!tolerado)
+        {
+            if (distX < quantoX && ultSaida && (paredes.PontaX(ultSaida.gameObject, true) < transform.position.x || paredes.PontaX(ultSaida.gameObject, false) < transform.position.x))
+            {
+                Move(false, EleEstaDireita(),true);
+            }
+            else
+            {
+                Move(true, EleEstaDireita(),true);
+            }
+        }
+        else
+        {
+            Move(false, EleEstaDireita(),true);
+            if (tolerancia)
+            {           
+                if (distX > quantoX + 0.25f)
+                {
+                    tolerado = false;
+                }
+            }
+            else
+            {
+                tolerado = false;
             }
         }
     }
        
 	public void SeAproximar(float quantoX,bool tolerencia){
-		distX = DistaciaX(transform.position.x, atributosHeroi.heroiX.transform.position.x);
 		nIrEsq = false;
 		nIrDirt = false;
         podeCair = false;
@@ -940,31 +971,9 @@ public class moveCPU : MonoBehaviour {
                     AproximarAcima();
                 }
             }
-            else if (distX > quantoX && !tolerado)
-            {
-                if (idPlata < 0)
-                {
-                    Move(true, EleEstaDireita());
-                }
-            }
             else
             {
-                Move(false, EleEstaDireita());
-                if (tolerencia)
-                {
-                    if (!tolerado)
-                    {
-                        tolerado = true;
-                    }
-                    else if (distX > quantoX + 0.25f)
-                    {
-                        tolerado = false;
-                    }
-                }
-                else if (tolerado)
-                {
-                    tolerado = false;
-                }
+                HeroiAproximaTolera(quantoX, tolerencia);
             }
 
             //Se estiver na ponta
@@ -985,11 +994,11 @@ public class moveCPU : MonoBehaviour {
                 {
                     viradoDireita = true;
                 }
-                Move(true, viradoDireita);
+                Move(true, viradoDireita,true);
             }
             else
             {
-                Move(false, viradoDireita);
+                Move(false, viradoDireita,true);
             }
         }
         else if (idPlata2 >= 0)
@@ -1004,12 +1013,15 @@ public class moveCPU : MonoBehaviour {
                 {
                     viradoDireita = true;
                 }
-                Move(true, viradoDireita);
+                Move(true, viradoDireita,true);
             }
             else
             {
-                Move(false, viradoDireita);
+                Move(false, viradoDireita,true);
             }
+        }else
+        {
+            HeroiAproximaTolera(quantoX, tolerencia);
         }
 	}
 
@@ -1127,11 +1139,11 @@ public class moveCPU : MonoBehaviour {
 
             if (DistaciaX(transform.position.x, posXPraIr2) < collid.bounds.extents.x)
             {
-                Move(false, viradoDireita);
+                Move(false, viradoDireita,true);
             }
             else
             {
-                Move(true, viradoDireita);
+                Move(true, viradoDireita,true);
             }
         }
         else if(idPlata>=0)
@@ -1157,15 +1169,15 @@ public class moveCPU : MonoBehaviour {
 
             if (DistaciaX(transform.position.x, posXPraIr) < collid.bounds.extents.x)
             {
-                Move(false, viradoDireita);
+                Move(false, viradoDireita,true);
             }
             else
             {
-                Move(true, viradoDireita);
+                Move(true, viradoDireita,true);
             }
         }else
         {
-            Move(false, viradoDireita);
+            Move(false, viradoDireita,true);
         }
 	}
 
@@ -1191,12 +1203,15 @@ public class moveCPU : MonoBehaviour {
             {
                 nIrEsq = true;
             }
-            distX = DistaciaX(transform.position.x, atributosHeroi.heroiX.transform.position.x);
-            if (distX < quantoX && !tolerado)
+            float distX = DistaciaX(transform.position.x, atributosHeroi.heroiX.transform.position.x);
+            if (!tolerado)
             {
-                ir = true;
-                VirarParaPlayer();
-                viradoDireita = !EleEstaDireita();
+                if (distX < quantoX)
+                {
+                    ir = true;
+                    VirarParaPlayer();
+                    viradoDireita = !EleEstaDireita();
+                }
             }
             else
             {
@@ -1205,12 +1220,8 @@ public class moveCPU : MonoBehaviour {
                 ir = false;
                 if (tolera)
                 {
-                    quantoX = quantoX * 0.8f;
-                    if (!tolerado)
-                    {
-                        tolerado = true;
-                    }
-                    else if (distX < quantoX)
+                    quantoX = quantoX + 0.25f;
+                    if (distX < quantoX)
                     {
                         tolerado = false;
                     }
@@ -1222,11 +1233,12 @@ public class moveCPU : MonoBehaviour {
             }
             if (ir)
             {
+                viradoDireita = !EleEstaDireita();
                 if (viradoDireita)
                 {
                     if (pontaDrt)
                     {
-                        Move(false, EleEstaDireita());
+                        Move(false, EleEstaDireita(),false);
                         encurralado = true;
                     }
                 }
@@ -1234,25 +1246,28 @@ public class moveCPU : MonoBehaviour {
                 {
                     if (pontaEsq)
                     {
-                        Move(false, EleEstaDireita());
+                        Move(false, EleEstaDireita(),false);
                         encurralado = true;
                     }
                 }
+            }else
+            {
+                VirarParaPlayer();
+            }
 
-                if (!encurralado)
-                {
-                    Move(ir, viradoDireita);
-                }
+            if (!encurralado)
+            {
+                Move(ir, viradoDireita, true);
             }
         }else
         {
-            Move(false, EleEstaDireita());
+            Move(false, EleEstaDireita(),false);
         }
 	}
 
 	public bool MesmaAltura(){
 		bool retorno = false;
-		distY = DistaciaX (transform.position.y, atributosHeroi.heroiX.transform.position.y);
+		float distY = DistaciaX (transform.position.y, atributosHeroi.heroiX.transform.position.y);
 		if (distY <= sobraDistY) {
 			retorno = true;
 		}
@@ -1279,7 +1294,7 @@ public class moveCPU : MonoBehaviour {
                 //Debug.Log(qualMove);
                 if (qualMove == 0)
                 {
-                    Move(false, viradoDireita);
+                    Move(false, viradoDireita,false);
                 }
                 else
                 {
@@ -1291,7 +1306,7 @@ public class moveCPU : MonoBehaviour {
                     {
                         viradoDireita = true;
                     }
-                    Move(true, viradoDireita);
+                    Move(true, viradoDireita,false);
                 }
 
                 tempoCaminhar = 0f;
@@ -1301,14 +1316,14 @@ public class moveCPU : MonoBehaviour {
             {
                 if (nIrDirt)
                 {
-                    Move(false, !viradoDireita);
+                    Move(false, !viradoDireita,false);
                 }
             }
             else
             {
                 if (nIrEsq)
                 {
-                    Move(false, viradoDireita);
+                    Move(false, viradoDireita,false);
                 }
             }
 
@@ -1435,7 +1450,7 @@ public class moveCPU : MonoBehaviour {
             VirarParaPlayer();
             Pular();
         }
-        Move(mX,viradoDireita);
+        Move(mX,viradoDireita,false);
 	}
 
 	private float DistasciaDoPulo(){
@@ -1482,7 +1497,45 @@ public class moveCPU : MonoBehaviour {
 		return retorno;
 	}
 
-    public void Move(bool moverse, bool direita)
+    private bool PodePularObstaculo(bool direita)
+    {
+        if (noChao)
+        {
+            Vector2 centBox = collid.bounds.center;
+            RaycastHit2D hitX;
+            if (direita)
+            {
+                centBox.x -= sobraDistY;
+                hitX = Physics2D.BoxCast(centBox, collid.bounds.size, 0f, Vector2.right, sobraDistY * 2f, fases.faseX.chao);
+
+                if (hitX)
+                {
+                    float altY = hitX.collider.bounds.center.y + hitX.collider.bounds.extents.y;
+                    if (altY < puloAltura + transform.position.y)
+                    {
+                        return true;
+                    }
+                }
+            }
+            else
+            {
+                centBox.x += sobraDistY;
+                hitX = Physics2D.BoxCast(centBox, collid.bounds.size, 0f, Vector2.left, sobraDistY * 2f, fases.faseX.chao);
+
+                if (hitX)
+                {
+                    float altY = hitX.collider.bounds.center.y + hitX.collider.bounds.extents.y;
+                    if (altY < puloAltura + transform.position.y)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    public void Move(bool moverse, bool direita, bool pularObstaculos)
     {
         if (moverse)
         {
@@ -1497,17 +1550,17 @@ public class moveCPU : MonoBehaviour {
         if (direita)
         {
             viradoDireita = true;
-            if ((obstaculoDir || (pontaDrt && !podeCair)) && moveX != 0f)
+            if(obstaculoDir && PodePularObstaculo(direita) && moveX > 0f && pularObstaculos)
             {
-                moveX = 0f;
-            }
+                Pular();
+            }         
         }
         else
         {
             viradoDireita = false;
-            if ((obstaculoEsq ||(pontaEsq && !podeCair)) && moveX != 0f)
+            if (obstaculoDir && PodePularObstaculo(direita) && moveX > 0f && pularObstaculos)
             {
-                moveX = 0f;
+                Pular();
             }
             else
             {

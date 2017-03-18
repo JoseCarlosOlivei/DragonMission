@@ -41,7 +41,7 @@ public class slimeNormal : MonoBehaviour {
                                     movimento.SeAproximar(0.7f, false);
                                 }else
                                 {
-                                    movimento.SeAproximar(0f, false);
+                                    movimento.SeAproximar(0.7f, false);
                                 }
 							}
 						}
@@ -76,6 +76,7 @@ public class slimeNormal : MonoBehaviour {
     public void VaiAtaque()
     {
         Vector2 f = Vector2.one;
+        f.x *= 2f;
         f.x *= transform.lossyScale.x;
         movimento.esteCorpo.AddForce(f, ForceMode2D.Impulse);
     }
